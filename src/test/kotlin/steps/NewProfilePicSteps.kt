@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver
 import tests.pages.NewProfilePicPage
 import tests.utils.LogParser
 
-internal class PhotoProcessingSteps(private val driver: WebDriver) {
+internal class NewProfilePicSteps(private val driver: WebDriver) {
     private val page = NewProfilePicPage(driver)
 
     fun openAndProcessPhoto(targetUrl: String, photoUrl: String) {

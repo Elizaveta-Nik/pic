@@ -45,7 +45,7 @@ internal class HttpLoggingInterceptor : Interceptor {
         }
 
         logger.info {
-        """
+            """
         |Response:
         |Status: ${response.code} ${response.message}
         |Headers: ${response.headers}
