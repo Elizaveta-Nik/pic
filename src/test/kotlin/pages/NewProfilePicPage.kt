@@ -1,6 +1,8 @@
 package tests.pages
 
 import org.openqa.selenium.By
+import org.openqa.selenium.OutputType
+import org.openqa.selenium.TakesScreenshot
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 
@@ -18,5 +20,9 @@ internal class NewProfilePicPage(driver: WebDriver) : BasePage(driver) {
 
     fun clickSaveAndShare() = apply {
         wait.until(ExpectedConditions.elementToBeClickable(saveAndShareButton)).click()
+    }
+
+    fun takeScreenshot(): ByteArray {
+        return (driver as TakesScreenshot).getScreenshotAs(OutputType.BYTES)
     }
 }

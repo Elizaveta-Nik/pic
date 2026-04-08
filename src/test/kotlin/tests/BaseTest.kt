@@ -13,9 +13,14 @@ internal abstract class BaseTest {
     fun setUp() {
         val options = ChromeOptions().apply {
             setCapability("goog:loggingPrefs", mapOf("browser" to "ALL"))
+            addArguments("--headless")
+            addArguments("--no-sandbox")
+            addArguments("--disable-dev-shm-usage")
+
+            val mobileEmulation = mapOf("deviceName" to "iPhone 12 Pro")
+            setExperimentalOption("mobileEmulation", mobileEmulation)
         }
         driver = ChromeDriver(options)
-        driver.manage().window().maximize()
     }
 
     @AfterEach

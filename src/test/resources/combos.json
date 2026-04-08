@@ -1,0 +1,17 @@
+[
+  {
+    "id": "123",
+    "name": "Spring Bloom",
+    "categories": ["woman", "man"]
+  },
+  {
+    "id": "456",
+    "name": "Tech Noir",
+    "categories": ["man"]
+  },
+  {
+    "id": "789",
+    "name": "Cartoon Fun",
+    "categories": ["child", "woman", "man"]
+  }
+]
